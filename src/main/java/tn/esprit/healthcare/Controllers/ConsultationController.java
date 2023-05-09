@@ -20,7 +20,7 @@ import tn.esprit.healthcare.Services.ConsultationService;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ConsultationController {
 
     @Autowired

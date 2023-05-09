@@ -17,7 +17,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/answer-op")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class AnswerController {
     @Autowired
     IAnswerService answerService ;

@@ -27,7 +27,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 // http://localhost:8080
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/social")
 // http://localhost:8080/social

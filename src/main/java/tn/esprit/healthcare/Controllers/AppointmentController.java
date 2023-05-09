@@ -12,7 +12,7 @@ import tn.esprit.healthcare.Services.AppointmentService;
 
 import java.util.Date;
 import java.util.List;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/appointments")
 public class AppointmentController {

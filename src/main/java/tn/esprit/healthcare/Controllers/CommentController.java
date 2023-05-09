@@ -13,7 +13,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/comment-op")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class CommentController {
 
     @Autowired
