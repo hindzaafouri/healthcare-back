@@ -8,10 +8,10 @@ import java.util.Set;
 
 public interface IAnswerService {
 
-    public void addAnswerAndAssignToThread (Answer answer , Long idThread , Long userId) ;
+    //public void addAnswerAndAssignToThread (Answer answer , Long idThread , Long userId) ;
     public void deleteAnswer (Answer answer) ;
 
-    public void updateAnswer (Answer answer) ;
+    //public void updateAnswer (Answer answer) ;
 
     public void upAnswer (Long id) ;
     public void downAnswer (Long id) ;

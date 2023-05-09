@@ -6,10 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import tn.esprit.healthcare.Entities.Answer;
 import tn.esprit.healthcare.Entities.Thread;
-import tn.esprit.healthcare.Entities.User;
 import tn.esprit.healthcare.Repositories.AnswerRepository;
 import tn.esprit.healthcare.Repositories.ThreadRepository;
-import tn.esprit.healthcare.Repositories.UserRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
@@ -24,10 +22,9 @@ public class AnswerService implements IAnswerService{
     @Autowired
     AnswerRepository answerRepository ;
 
-    @Autowired
-    UserRepository userRepository ;
 
-    @Override
+
+    /*@Override
     public void addAnswerAndAssignToThread(Answer answer, Long idThread , Long userId) {
         Optional<Thread> optionalThread = threadRepository.findById(idThread);
         if (optionalThread.isPresent()) {
@@ -47,9 +44,9 @@ public class AnswerService implements IAnswerService{
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Thread not found");
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void updateAnswer(Answer updatedAnswer) {
         // Check if the answer already exists in the database
         Optional<Answer> answerOptional = answerRepository.findById(updatedAnswer.getIdAnswer());
@@ -67,7 +64,7 @@ public class AnswerService implements IAnswerService{
             throw new EntityNotFoundException("Answer with ID " + updatedAnswer.getIdAnswer() + " not found");
 
         }
-    }
+    }*/
 
     @Override
     public void upAnswer(Long id) {

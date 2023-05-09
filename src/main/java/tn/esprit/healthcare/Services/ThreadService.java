@@ -78,7 +78,7 @@ public class ThreadService implements IThreadService {
 
 
             thread.setCreatedAt(thread.getCreatedAt());
-            thread.setUser(thread.getUser());
+            //thread.setUser(thread.getUser());
             thread.setVotes(thread.getVotes());
 
             thread.setCoverPhotoThread(thread.getCoverPhotoThread());

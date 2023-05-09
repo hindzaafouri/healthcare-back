@@ -62,13 +62,7 @@ public class Appointment implements Serializable{
     }
 
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public String getDepartment() {
         return department;
@@ -94,7 +88,7 @@ public class Appointment implements Serializable{
         this.medecin = medecin;
     }
 
-    @JsonIgnore
+    /*@JsonIgnore
     @ManyToOne
-    User user ;
+    User user ;*/
 }

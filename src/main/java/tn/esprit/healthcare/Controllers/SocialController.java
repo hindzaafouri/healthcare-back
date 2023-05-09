@@ -13,18 +13,13 @@ import org.springframework.social.facebook.api.User;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.healthcare.Entities.Role;
-import tn.esprit.healthcare.Payload.JwtLogin;
-import tn.esprit.healthcare.Payload.LoginResponse;
-import tn.esprit.healthcare.Payload.TokenDto;
 import tn.esprit.healthcare.Services.AuthoritiesService;
 import tn.esprit.healthcare.Services.TokenService;
-import tn.esprit.healthcare.Services.UserService;
 
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 // http://localhost:8080
 @CrossOrigin(origins = "*")
@@ -36,21 +31,21 @@ public class SocialController {
     @Value("google.id")
     private String idClient;
 
-    private UserService userService;
+    //private UserService userService;
     private AuthoritiesService authoritiesService;
     private TokenService tokenService;
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
+    /*@Autowired
     public SocialController(UserService userService, AuthoritiesService authoritiesService, TokenService tokenService, PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.authoritiesService = authoritiesService;
         this.tokenService = tokenService;
         this.passwordEncoder = passwordEncoder;
-    }
+    }*/
 
     //http://localhost:8080/social/google
-    @PostMapping("/google")
+    /*@PostMapping("/google")
     public LoginResponse loginWithGoogle(@RequestBody TokenDto tokenDto) throws IOException {
         NetHttpTransport transport = new NetHttpTransport();
         JacksonFactory factory = JacksonFactory.getDefaultInstance();
@@ -60,19 +55,19 @@ public class SocialController {
         GoogleIdToken googleIdToken = GoogleIdToken.parse(ver.getJsonFactory(),tokenDto.getToken());
         GoogleIdToken.Payload payload = googleIdToken.getPayload();
         return login(payload.getEmail());
-    }
+    }*/
 
     //http://localhost:8080/social/facebook
-    @PostMapping("/facebook")
+    /*@PostMapping("/facebook")
     public LoginResponse loginWithFacebook(@RequestBody TokenDto tokenDto){
         Facebook facebook = new FacebookTemplate(tokenDto.getToken());
         String [] data = {"email","name","picture"};
         User userFacebook = facebook.fetchObject("me",User.class,data);
         return login(userFacebook.getEmail());
 
-    }
+    }*/
 
-    private LoginResponse login(String email){
+    /*private LoginResponse login(String email){
         boolean result = userService.ifEmailExist(email); // t   // f
         if(!result){
             tn.esprit.healthcare.Entities.User user = new tn.esprit.healthcare.Entities.User();
@@ -93,5 +88,5 @@ public class SocialController {
         jwtLogin.setEmail(email);
         jwtLogin.setPassword("farouk");
         return tokenService.login(jwtLogin);
-    }
+    }*/
 }

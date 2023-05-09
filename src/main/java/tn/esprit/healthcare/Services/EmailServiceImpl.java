@@ -5,7 +5,6 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import tn.esprit.healthcare.Payload.Mail;
 
 @Service
 public class EmailServiceImpl implements EmailService{
@@ -17,7 +16,7 @@ public class EmailServiceImpl implements EmailService{
         this.javaMailSender = javaMailSender;
     }
 
-    @Override
+    /*@Override
     @Async
     public void sendCodeByMail(Mail mail) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
@@ -26,8 +25,8 @@ public class EmailServiceImpl implements EmailService{
         simpleMailMessage.setSubject("Code Active");
         simpleMailMessage.setText(mail.getCode());
         javaMailSender.send(simpleMailMessage);
-    }
-    @Override
+    }*/
+    /*@Override
     public void sendMail(String to, String subject, String body)
     {
         SimpleMailMessage message = new SimpleMailMessage();
@@ -35,5 +34,5 @@ public class EmailServiceImpl implements EmailService{
         message.setSubject(subject);
         message.setText(body);
         javaMailSender.send(message);
-    }
+    }*/
 }

@@ -25,13 +25,13 @@ public class AnswerController {
     @Autowired
     IThreadService threadService ;
 
-    @PostMapping("/add-answer/{idThread}")
+    /*@PostMapping("/add-answer/{idThread}")
     public ResponseEntity<Void> addAnswerAndAssignToThread (@RequestBody Answer answer , @PathVariable Long idThread , @RequestParam Long userId) {
            answerService.addAnswerAndAssignToThread(answer,idThread,userId);
            return ResponseEntity.status(HttpStatus.CREATED).build() ;
-    }
+    }*/
 
-    @PutMapping(value = "/update-answer/{idAnswer}")
+    /*@PutMapping(value = "/update-answer/{idAnswer}")
     public ResponseEntity<Void> updateAnswer(@RequestBody Answer updatedAnswer, @PathVariable Long idAnswer) {
         // Set the id of the updated answer to the id in the path variable
         updatedAnswer.setIdAnswer(idAnswer);
@@ -39,7 +39,7 @@ public class AnswerController {
         answerService.updateAnswer(updatedAnswer);
         // Return a response with no content and a status of OK
         return ResponseEntity.ok().build();
-    }
+    }*/
 
 
     @DeleteMapping("/delete-answer/{idAnswer}")

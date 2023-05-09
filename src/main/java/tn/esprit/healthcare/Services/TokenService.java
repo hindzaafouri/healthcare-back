@@ -1,6 +1,5 @@
 package tn.esprit.healthcare.Services;
 
-import com.auth0.jwt.JWT;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +8,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import tn.esprit.healthcare.Entities.User;
-import tn.esprit.healthcare.Payload.JwtLogin;
-import tn.esprit.healthcare.Payload.JwtProperties;
-import tn.esprit.healthcare.Payload.LoginResponse;
-import tn.esprit.healthcare.Payload.UserPrincipal;
-import tn.esprit.healthcare.Repositories.UserRepository;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -27,7 +19,7 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 @Service
 public class TokenService {
     private AuthenticationManager authenticationManager;
-    private UserService userService;
+   /* private UserService userService;
     private UserRepository userRepository;
     @Value("${bezkoder.app.jwtSecret}")
     private String jwtSecret;
@@ -70,5 +62,5 @@ public class TokenService {
         String token = generateToken(authenticate);
         return new LoginResponse(user,jwtLogin.getEmail(),token);
 
-    }
+    }*/
 }

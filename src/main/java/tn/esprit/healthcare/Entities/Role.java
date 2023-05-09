@@ -22,10 +22,10 @@ public class Role {
     @Column(name = "role_name")
 
     private String roleName;
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    /*@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id")
     @JsonIgnore
-    private User user;
+    private User user;*/
 
     public Long getId() {
         return id;
@@ -43,11 +43,5 @@ public class Role {
         this.roleName = roleName;
     }
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

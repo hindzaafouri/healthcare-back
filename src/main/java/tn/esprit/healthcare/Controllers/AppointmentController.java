@@ -27,11 +27,11 @@ public class AppointmentController {
         return new ResponseEntity<>(appointmentService.findAll(), HttpStatus.OK);
     }
 
-    @PostMapping("/liste")
+    /*@PostMapping("/liste")
     public ResponseEntity<Appointment> saveAppointment(@RequestBody Appointment appointment, @RequestParam Long userId){
         Appointment appointmentO =appointmentService.save(appointment,userId);
         return new ResponseEntity<Appointment>(appointmentO, HttpStatus.OK);
-    }
+    }*/
 
     @GetMapping("/liste/{id_appointment}")
     public ResponseEntity<Appointment> getAppointment(@PathVariable("id_appointment")Long id_appointment){

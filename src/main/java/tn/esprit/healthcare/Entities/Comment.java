@@ -22,6 +22,6 @@ public class Comment implements Serializable {
     @ManyToOne
     Answer answer ;
 
-    @ManyToOne
-    User user ;
+    /*@ManyToOne
+    User user ;*/
 }

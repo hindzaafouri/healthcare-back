@@ -6,15 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import tn.esprit.healthcare.Entities.Answer;
 import tn.esprit.healthcare.Entities.Comment;
-import tn.esprit.healthcare.Entities.Thread;
-import tn.esprit.healthcare.Entities.User;
 import tn.esprit.healthcare.Repositories.AnswerRepository;
 import tn.esprit.healthcare.Repositories.CommentRepository;
-import tn.esprit.healthcare.Repositories.UserRepository;
 
-import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -26,9 +21,8 @@ public class CommentService implements ICommentService {
     @Autowired
     CommentRepository commentRepository ;
 
-    @Autowired
-    UserRepository userRepository ;
-    @Override
+
+    /*@Override
     public void addCommentAndAssignToAnswer(Comment comment, Long idAnswer, Long userId) {
         Optional<Answer> optionalAnswer = answerRepository.findById(idAnswer) ;
         if (optionalAnswer.isPresent()) {
@@ -47,7 +41,7 @@ public class CommentService implements ICommentService {
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Answer not found");
         }
-    }
+    }*/
 
     @Override
     public void deleteComment(Comment comment) {

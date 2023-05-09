@@ -42,10 +42,10 @@ public class Consultation {
     private Date end_date;
     @Column
     private String url_meeting;
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE, optional = false)
-    private User doctor ;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, optional = false)
-    private User patient ;
+    /*@ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.MERGE, optional = false)
+    private User doctor ;*/
+    /*@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, optional = false)
+    private User patient ;*/
 
 
     public Long getId() {
@@ -88,7 +88,7 @@ public class Consultation {
         this.url_meeting = url_meeting;
     }
 
-    public User getDoctor() {
+    /*public User getDoctor() {
         return doctor;
     }
 
@@ -102,5 +102,5 @@ public class Consultation {
 
     public void setPatient(User patient) {
         this.patient = patient;
-    }
+    }*/
 }

@@ -32,11 +32,11 @@ public class ConsultationController {
 
     }
 
-    @PostMapping("/AddConsultation/{id}")
+    /*@PostMapping("/AddConsultation/{id}")
     public ResponseEntity<Consultation> saveConsultation(@RequestBody Consultation consultation, @PathVariable Long id){
         Consultation consultation2 =consultationService.AddConsultation(consultation,id);
         return new ResponseEntity<Consultation>(consultation2, HttpStatus.OK);
-    }
+    }*/
 
     @GetMapping("/Consultation/{id}")
     public ResponseEntity<Consultation> getConsultation(@PathVariable("id")Long id){

@@ -21,7 +21,7 @@ public class Code  {
     @Column(name = "code")
     private String Code;
 
-    @OneToOne(mappedBy = "code")
-    private User user;
+    /*@OneToOne(mappedBy = "code")
+    private User user;*/
 
 }

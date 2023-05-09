@@ -1,23 +1,16 @@
 package tn.esprit.healthcare.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import tn.esprit.healthcare.Entities.Answer;
 import tn.esprit.healthcare.Entities.Thread;
 import tn.esprit.healthcare.Entities.Topic;
-import tn.esprit.healthcare.Entities.User;
-import tn.esprit.healthcare.Repositories.UserRepository;
 import tn.esprit.healthcare.Services.IThreadService;
-import tn.esprit.healthcare.Services.UserDetailsImpl;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -37,8 +30,7 @@ public class ThreadController {
     @Autowired
     IThreadService threadService ;
 
-    @Autowired
-    UserRepository userRepository ;
+
 
 
     /*@PostMapping("/add-thread")
@@ -54,7 +46,7 @@ public class ThreadController {
         thread.setUser(user);
         return threadService.addThread(thread) ;
     }*/
-    @PostMapping("/add-thread")
+    /*@PostMapping("/add-thread")
     public Thread addThread (@RequestParam(value = "file", required = false) MultipartFile file,
                              @RequestParam("title") String title,
                              @RequestParam("topic") Topic topic ,
@@ -75,7 +67,7 @@ public class ThreadController {
         thread.setQuestionThread(question);
         thread.setTopicThread(topic);
         return threadService.addThread(thread);
-    }
+    }*/
 
 
 

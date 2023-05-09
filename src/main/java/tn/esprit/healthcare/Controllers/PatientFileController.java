@@ -28,7 +28,7 @@ public class PatientFileController {
     @GetMapping("/all")
     public List<PatientFile> getAll(){
         String body="test";
-        emailService.sendMail("anaslamiri07@gmail.com","Le patient est encore malade",body);
+        //emailService.sendMail("anaslamiri07@gmail.com","Le patient est encore malade",body);
         return iPatientFileServiceimpl.getAllPatientFile();
 
     }

@@ -5,9 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import tn.esprit.healthcare.Entities.Appointment;
-import tn.esprit.healthcare.Entities.User;
 import tn.esprit.healthcare.Repositories.AppointmentRepository;
-import tn.esprit.healthcare.Repositories.UserRepository;
 
 import java.util.Date;
 import java.util.List;
@@ -17,19 +15,19 @@ public class AppointmentServiceImpl implements AppointmentService{
     @Autowired
     private AppointmentRepository appointmentRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    /*@Autowired
+    private UserRepository userRepository;*/
     public List<Appointment> findAll() {
         return appointmentRepository.findAll();
     }
 
-    @Override
+    /*@Override
     public Appointment save(Appointment appointment, Long userId) {
         User user = userRepository.findById(userId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
         appointment.setUser(user);
         appointmentRepository.save(appointment);
         return appointment;
-    }
+    }*/
 
     @Override
     public Appointment findById(Long id_appointment) {

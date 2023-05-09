@@ -18,11 +18,11 @@ public class CommentController {
 
     @Autowired
     ICommentService commentService ;
-    @PostMapping("/add-comment/{idAnswer}")
+    /*@PostMapping("/add-comment/{idAnswer}")
     public ResponseEntity<Void> addCommentAndAssignToAnswer (@RequestBody Comment comment , @PathVariable Long idAnswer,@RequestParam Long userId) {
         commentService.addCommentAndAssignToAnswer(comment,idAnswer,userId);
         return ResponseEntity.status(HttpStatus.CREATED).build() ;
-    }
+    }*/
 
     @DeleteMapping("/{idComment}")
     public void deleteComment (@PathVariable Long idComment) {
