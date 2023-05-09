@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'healthcarePI-back'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B7CB535D2D0489E98C2D0AFC64B8ED4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8746B12660074EE699991665E6ADC021 }}
           package: '*.jar'
